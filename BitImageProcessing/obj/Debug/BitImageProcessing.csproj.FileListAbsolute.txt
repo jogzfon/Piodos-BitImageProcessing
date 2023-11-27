@@ -1,0 +1,10 @@
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\bin\Debug\BitImageProcessing.exe.config
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\bin\Debug\BitImageProcessing.exe
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\bin\Debug\BitImageProcessing.pdb
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.csproj.AssemblyReference.cache
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.Form1.resources
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.Properties.Resources.resources
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.csproj.GenerateResource.cache
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.csproj.CoreCompileInputs.cache
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.exe
+C:\Users\jogzfon\OneDrive - Cebu Institute of Technology University\Documents\C#\BitImageProcessing\BitImageProcessing\obj\Debug\BitImageProcessing.pdb
