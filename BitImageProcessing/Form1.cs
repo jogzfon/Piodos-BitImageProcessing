@@ -349,7 +349,14 @@ namespace BitImageProcessing
                 this.Width -= 200;
                 isSubtract = false;
             }
-            pict01.Image = null; pict02.Image = null; pict03.Image = null;
+            if(pict03 == null)
+            {
+                pict01.Image = null; pict02.Image = null;
+            }
+            else
+            {
+                pict01.Image = null; pict02.Image = null; pict03.Image = null;
+            }
             device.ShowWindow(pict01);
         }
 
