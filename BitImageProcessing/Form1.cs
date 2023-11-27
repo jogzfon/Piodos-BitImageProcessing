@@ -363,10 +363,40 @@ namespace BitImageProcessing
         private void greenScreen_Tick(object sender, EventArgs e)
         {
             device.Sendmessage();
+            // Capture the current frame from pictureBox1 and convert it to a Bitmap
+            Bitmap currentFrame = PictureBoxToBitmap(pict01);
+
+            // Display the converted Bitmap in pictureBox2
+            pict02.Image = currentFrame;
         }
+    
         private void GreenScreenStart(object sender, EventArgs e)
         {
             greenScreenTimer.Start();
+        }
+        private Bitmap PictureBoxToBitmap(PictureBox pictureBox)
+        {
+            // Get the size and location of pict01
+            int pictureBoxWidth = pict01.Width;
+            int pictureBoxHeight = pict01.Height;
+            Point pictureBoxLocation = pict01.PointToScreen(Point.Empty);
+
+            // Get the size of the screen
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            // Calculate the center position for pict01 on the screen
+            int centerX = (screenWidth - pictureBoxWidth) / 2;
+            int centerY = (screenHeight - pictureBoxHeight) / 2;
+
+            // Capture the content of the area containing the centered pict01
+            Bitmap screenCapture = new Bitmap(pictureBoxWidth, pictureBoxHeight);
+            using (Graphics g = Graphics.FromImage(screenCapture))
+            {
+                g.CopyFromScreen(new Point(centerX, centerY), Point.Empty, new Size(pictureBoxWidth, pictureBoxHeight));
+            }
+
+            return screenCapture;
         }
         private void Close_Camera(object sender, EventArgs e)
         {

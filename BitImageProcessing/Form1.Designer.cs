@@ -223,7 +223,7 @@
             // 
             // greenScreenTimer
             // 
-            this.greenScreenTimer.Interval = 5000;
+            this.greenScreenTimer.Interval = 1;
             this.greenScreenTimer.Tick += new System.EventHandler(this.greenScreen_Tick);
             // 
             // greenScreenToolStripMenuItem1
