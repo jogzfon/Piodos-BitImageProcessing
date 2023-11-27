@@ -51,6 +51,7 @@
             this.pict02 = new System.Windows.Forms.PictureBox();
             this.greenScreenTimer = new System.Windows.Forms.Timer(this.components);
             this.greenScreenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pict01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict02)).BeginInit();
@@ -66,7 +67,7 @@
             this.cameraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1481, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1381, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,7 +192,8 @@
             // 
             this.cameraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.greenScreenToolStripMenuItem1});
+            this.greenScreenToolStripMenuItem1,
+            this.closeToolStripMenuItem});
             this.cameraToolStripMenuItem.Name = "cameraToolStripMenuItem";
             this.cameraToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.cameraToolStripMenuItem.Text = "Camera";
@@ -221,7 +223,7 @@
             // 
             // greenScreenTimer
             // 
-            this.greenScreenTimer.Interval = 50;
+            this.greenScreenTimer.Interval = 5000;
             this.greenScreenTimer.Tick += new System.EventHandler(this.greenScreen_Tick);
             // 
             // greenScreenToolStripMenuItem1
@@ -231,11 +233,18 @@
             this.greenScreenToolStripMenuItem1.Text = "GreenScreen";
             this.greenScreenToolStripMenuItem1.Click += new System.EventHandler(this.GreenScreenStart);
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.Close_Camera);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1481, 673);
+            this.ClientSize = new System.Drawing.Size(1381, 673);
             this.Controls.Add(this.pict02);
             this.Controls.Add(this.pict01);
             this.Controls.Add(this.menuStrip1);
@@ -275,6 +284,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.Timer greenScreenTimer;
         private System.Windows.Forms.ToolStripMenuItem greenScreenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
     }
 }
 

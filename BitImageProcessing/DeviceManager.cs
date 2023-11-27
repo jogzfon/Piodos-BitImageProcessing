@@ -43,5 +43,6 @@ namespace BitImageProcessing
         {
             return (Device)devices[deviceIndex];
         }
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ namespace BitImageProcessing
         DeviceManager devicemanager;
         Device device;
         PictureBox pict03;
+        bool isSubtract = false;
         public Form1()
         {
             InitializeComponent();
@@ -274,8 +276,12 @@ namespace BitImageProcessing
 
         private void Subtract_Pressed(object sender, EventArgs e)
         {
+            if (!isSubtract)
+            {
+                this.Width += 200;
+                isSubtract = true;
+            }
             // Set the form width to 1300
-            this.Width = 1300;
 
             // Create a PictureBox if it doesn't exist
             if (pict03 == null)
@@ -338,18 +344,27 @@ namespace BitImageProcessing
 
         private void Open_Camera(object sender, EventArgs e)
         {
+            if (isSubtract)
+            {
+                this.Width -= 200;
+                isSubtract = false;
+            }
+            pict01.Image = null; pict02.Image = null; pict03.Image = null;
             device.ShowWindow(pict01);
         }
 
         private void greenScreen_Tick(object sender, EventArgs e)
         {
-            Bitmap converted = pict01.Image;
+            device.Sendmessage();
         }
-
         private void GreenScreenStart(object sender, EventArgs e)
         {
-
+            greenScreenTimer.Start();
         }
-
+        private void Close_Camera(object sender, EventArgs e)
+        {
+            greenScreenTimer.Stop();
+            device.Stop();
+        }
     }
 }
